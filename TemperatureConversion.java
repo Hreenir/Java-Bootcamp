@@ -32,22 +32,22 @@ public class TemperatureConversion {
         }
     }
 
-    public static double findFahrenheitForCelsius(double celsius) {
+    private static double findFahrenheitForCelsius(double celsius) {
         return celsius * 1.8 + 32;
     }
-    public static double findKelvinForCelsius (double celsius) {
+    private static double findKelvinForCelsius (double celsius) {
         return celsius + 273.15;
     }
-    public static double findCelsiusForKelvin (double kelvin) {
+    private static double findCelsiusForKelvin (double kelvin) {
         return kelvin - 273.15;
     }
-    public static double findFahrenheitForKelvin (double kelvin) {
+    private static double findFahrenheitForKelvin (double kelvin) {
         return (kelvin - 273.15) * 9/5 + 32;
     }
-    public static double findCelsiusForFahrenheit (double fahrenheit) {
+    private static double findCelsiusForFahrenheit (double fahrenheit) {
         return (fahrenheit - 32) * 5/9;
     }
-    public static double findKelvinForFahrenheit (double fahrenheit) {
+    private static double findKelvinForFahrenheit (double fahrenheit) {
         return (fahrenheit - 32) * 5/9 + 273.15;
     }
 }
