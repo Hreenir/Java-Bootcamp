@@ -4,11 +4,11 @@ import java.util.Scanner;
 public class TemperatureConversion {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int temperature = 0;
+        double temperature = 0;
         while (true) {
             System.out.println("Введите температуру.");
             try {
-                temperature = scanner.nextInt();
+                temperature = scanner.nextDouble();
             } catch (InputMismatchException e) {
                 System.out.println("Некорректные данные.");
                 System.exit(0);
