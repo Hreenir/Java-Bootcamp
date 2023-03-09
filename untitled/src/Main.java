@@ -51,3 +51,4 @@ public class Main {
         return (fahrenheit - 32) * 5/9 + 273.15;
     }
 }
+
