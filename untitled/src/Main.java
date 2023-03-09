@@ -31,7 +31,6 @@ public class Main {
             }
         }
     }
-
     public static double findFahrenheitForCelsius(double celsius) {
         return celsius * 1.8 + 32;
     }
