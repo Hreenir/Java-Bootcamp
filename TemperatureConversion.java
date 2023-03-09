@@ -1,12 +1,18 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class TemperatureConversion {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        int temperature = 0;
         while (true) {
             System.out.println("Введите температуру.");
-            int temperature = scanner.nextInt();
-
+            try {
+                temperature = scanner.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("Некорректные данные.");
+                System.exit(0);
+            }
             System.out.println("""
                     Введите единицу измерения температуры:
                     C - для Цельсия
@@ -35,19 +41,24 @@ public class TemperatureConversion {
     private static double findFahrenheitForCelsius(double celsius) {
         return celsius * 1.8 + 32;
     }
-    private static double findKelvinForCelsius (double celsius) {
+
+    private static double findKelvinForCelsius(double celsius) {
         return celsius + 273.15;
     }
-    private static double findCelsiusForKelvin (double kelvin) {
+
+    private static double findCelsiusForKelvin(double kelvin) {
         return kelvin - 273.15;
     }
-    private static double findFahrenheitForKelvin (double kelvin) {
-        return (kelvin - 273.15) * 9/5 + 32;
+
+    private static double findFahrenheitForKelvin(double kelvin) {
+        return (kelvin - 273.15) * 9 / 5 + 32;
     }
-    private static double findCelsiusForFahrenheit (double fahrenheit) {
-        return (fahrenheit - 32) * 5/9;
+
+    private static double findCelsiusForFahrenheit(double fahrenheit) {
+        return (fahrenheit - 32) * 5 / 9;
     }
-    private static double findKelvinForFahrenheit (double fahrenheit) {
-        return (fahrenheit - 32) * 5/9 + 273.15;
+
+    private static double findKelvinForFahrenheit(double fahrenheit) {
+        return (fahrenheit - 32) * 5 / 9 + 273.15;
     }
 }
