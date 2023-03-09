@@ -18,9 +18,9 @@ public class TemperatureConversion {
                     C - для Цельсия
                     K - для Кельвина
                     F - для Фаренгейт""");
-            String choice = scanner.next().toUpperCase();
+            String choiceResult = scanner.next().toUpperCase();
 
-            switch (choice) {
+            switch (choiceResult) {
                 case "C" -> {
                     System.out.println(findFahrenheitForCelsius(temperature));
                     System.out.println(findKelvinForCelsius(temperature));
